@@ -59,29 +59,33 @@ class App extends Component{
 
   render () {
     return (
-      <div>
+      <div class = "appItems">
         <form>
-          <input 
-            type = "text"
-            value = {this.state.userNumber}
-            name = "userNumber"
-            placeholder = "Enter a Number to be converted" 
-            onChange = {this.handleChange}
-            id = "textField"
-          />
+          <label class = "label">Number to be converted
+            <input 
+              type = "text"
+              value = {this.state.userNumber}
+              name = "userNumber"
+              placeholder = "Enter a Number to be converted" 
+              onChange = {this.handleChange}
+              id = "textField"
+            />
+          </label> 
           <br></br>
-          <input 
-            type = "text"
-            value = {this.state.numberBase}
-            name = "numberBase"
-            placeholder = "Enter new base for the number" 
-            onChange = {this.handleChange}
-            id = "textField"
-          />
+          <br></br>
+          <label class = "label"> New Base of Number
+            <input 
+              type = "text"
+              value = {this.state.numberBase}
+              name = "numberBase"
+              placeholder = "Enter new base for the number" 
+              onChange = {this.handleChange}
+              id = "textField"
+            />
+          </label> 
         </form>
         <br></br>
-        <br></br>
-        <p>
+        <p class = "label">
         {this.state.userNumber} converted to base {this.state.numberBase} is: {this.state.convertedNumber}
           <br></br>
         </p>

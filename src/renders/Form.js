@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
+import React, {Component} from "react"
 
-import FormComponent from './FormComponent.js'
+import FormComponent from "./FormComponent.js"
 
 class Form extends Component{
   constructor(){

@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 
-class App extends Component{
+import FormComponent from './FormComponent.js'
+
+class Form extends Component{
   constructor(){
     super();
     this.state = {
@@ -59,38 +61,11 @@ class App extends Component{
 
   render () {
     return (
-      <div class = "appItems">
-        <form>
-          <label class = "label">Number to be converted
-            <input 
-              type = "text"
-              value = {this.state.userNumber}
-              name = "userNumber"
-              placeholder = "Enter a Number to be converted" 
-              onChange = {this.handleChange}
-              id = "textField"
-            />
-          </label> 
-          <br></br>
-          <br></br>
-          <label class = "label"> New Base of Number
-            <input 
-              type = "text"
-              value = {this.state.numberBase}
-              name = "numberBase"
-              placeholder = "Enter new base for the number" 
-              onChange = {this.handleChange}
-              id = "textField"
-            />
-          </label> 
-        </form>
-        <br></br>
-        <p class = "label">
-        {this.state.userNumber} converted to base {this.state.numberBase} is: {this.state.convertedNumber}
-          <br></br>
-        </p>
-      </div>
+      <FormComponent 
+        handleChange = {this.handleChange}
+        data = {this.state}
+      />
     )}
 }
 
-export default App;
+export default Form;
